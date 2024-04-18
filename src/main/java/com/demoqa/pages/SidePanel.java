@@ -37,7 +37,7 @@ public class SidePanel extends BasePage {
         return new SelectMenuPage(driver);
     }
 
-/*    //
+    //
     @FindBy(xpath = "//span[.='Practice Form']")
     WebElement practiceForm;
 
@@ -54,7 +54,7 @@ public class SidePanel extends BasePage {
     public DroppablePage selectDroppable() {
         clickWithJS(droppable, 0, 600);
         return new DroppablePage(driver);
-    }*/
+    }
 
 
 }//class
