@@ -19,5 +19,11 @@ public class DroppableTests extends TestBase {
         new DroppablePage(driver).actionDragMe();
     }
 
+    //
+    @Test
+    public void actionDragMeByTest() {
+        new DroppablePage(driver).hideIframes();
+        new DroppablePage(driver).actionDragMeBy();
+    }
 
 }//class

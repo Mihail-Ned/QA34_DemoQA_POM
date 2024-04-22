@@ -31,6 +31,33 @@ public class DroppablePage extends BasePage {
     }
 
     //
+    public DroppablePage actionDragMeBy() {
+        Actions actions = new Actions(driver);
+        pause(500);
+
+        //
+        int xOffset1 = dragMe.getLocation().getX();
+        int yOffset1 = dragMe.getLocation().getY();
+        System.out.println("xOffset1 --> " + xOffset1 + " yOffset1 " + yOffset1);
+        //
+        int xOffset = dropHere.getLocation().getX();
+        int yOffset = dropHere.getLocation().getY();
+        System.out.println("xOffset1 --> " + xOffset + " yOffset1 " + yOffset);
+
+        xOffset = (xOffset - xOffset1) +250;
+        yOffset = (yOffset - xOffset1) +200;
+        actions.dragAndDropBy(dragMe, xOffset, yOffset).perform();
+
+        String text = dropHere.getText();
+        if (text.equals("Dropped!")) {
+            System.out.println("PASS!");
+        } else {
+            System.out.println("FAIL!");
+        }
+        return this;
+    }
+
+    //
 
 
 }//class

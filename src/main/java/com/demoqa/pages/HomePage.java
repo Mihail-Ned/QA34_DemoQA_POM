@@ -41,7 +41,6 @@ public class HomePage extends BasePage{
     }
 
     //
-
     @FindBy(css = ".top-card:nth-child(5)")
     WebElement interactions;
 
@@ -50,4 +49,17 @@ public class HomePage extends BasePage{
         clickWithJS(interactions, 0, 300 );
         return new SidePanel(driver);
     }
+
+    //
+    @FindBy(css = ".top-card:nth-child(1)")
+    WebElement elements;
+
+    public SidePanel getElements() {
+        clickWithJS(elements, 0, 300 );
+        return new SidePanel(driver);
+    }
+
+    //
+
+
 }//class
